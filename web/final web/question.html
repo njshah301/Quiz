@@ -1,0 +1,206 @@
+<html>
+<head>
+<title>
+Questions
+</title>
+<style>
+
+
+h1{
+    background-color:green;   
+} 
+ font{
+    
+    width: 100%;
+    height: 40px;
+    margin:  50 auto;
+    font-weight: bolder;   
+}  
+body{
+        background-color:rgb(48, 241, 232);
+}
+div{
+        display: none;
+        
+}
+font{
+        font-size: 1.2em;
+        color: red;
+        font-weight: bolder;
+        
+}
+#z:hover{
+        background-color:yellow; 
+}
+#as{
+        display: block;
+        background-image: url("a.jpg");
+}
+</style>
+<script>
+
+var  a=new Array('a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q');
+var index=0;
+var count=0;
+function fun(){
+        if(index==9)
+        {	
+        document.write("<h1 style='color:red;text-align:center'>Your Score is "+count+"</h1>");
+        if(count>=350 && count<=400)
+        document.write("<h1>Your Mental Age is between 4-9</h1><br><br><ul><h1 style='color:blue;'><img src='looser.jpg' style='width:100%;height:100%'>This means that you have a very chidish nature you can ind joy and amusement from the simplest things.</h1></ul>");
+    	if(count>=300 && count<350)     
+        document.write("<h1>Your Mental Age is between 9-16</h1><br><br><ul><h1 style='color:blue;'><img src='looser.jpg' style='width:100%;height:100%'>This means that you have a mental age of young teenager-you are fairly immature and can sometimes rebel against the norm;you are a quirky character.</h1></ul>");
+    	if(count>=250 && count<300)
+	    document.write("<h1>Your Mental Age is between 16-21</h1><br><br><ul><h1 style='color:blue;'><img src='teen.jpg' style='width:100%;height:100%'>This means that you know when to act maturely,but you also know when to have a fun time.You can act seriously when you need to but you can sometimes act a little immature.</h1></ul>");
+		if(count>=200 && count<=249)
+        document.write("<h1>Your Mental Age is between 21-29</h1><br><br><ul><h1 style='color:blue;'><img src='mature.jpg' style='width:100%;height:100%'>You have a mental age of a young adult;you are mature most of the time,and know when to act seriously.You are intelligent and self-aware.</h1></ul>");
+    	if(count>=150 && count<=199)
+        document.write("<h1>Your Mental Age is between 29-55</h1><br><br><ul><h1 style='color:blue;'><img src='meed.jpg' style='width:100%;height:100%'>You have the mental age of a mature adult.You are modest and noble.You have good manners and an equally good etiquette.</h1></ul>");
+    	if(count>=100 && count<150)
+        document.write("<h1>Your Mental Age is  55+</h1><br><br><ul><h1 style='color:blue;'><img src='old.jpg ' style='width:100%;height:100%'>You the mental age of an old person-you appreciate the simple things in life and are not too bothered with modern technology.</h1></ul>");
+if(count<100)
+        document.write(" <h1 style='color:blue;'> <div style='position:absolute;width:100%;height:100%' background-color:yellow><img src='looser.jpg' style='width:100%;height:100%'/>All answers are mandatory.</h1></div><br><br>");
+                
+
+
+    }
+        else{
+        var temp=document.getElementById(a[index]);
+        var i=0;
+        var temp1=0;
+        var btn = document.getElementById("imm");
+        btn.src=a[index+1]+".jpg";
+        btn.style.width="100%";
+        btn.style.height="100%";         
+        for(i=0;i<4;i++){
+        if(document.forms[index].elements[i].checked){
+        temp1=parseInt(document.forms[index].elements[i].value);
+    		}
+		}
+	count=count+temp1;
+        temp.style.display='none';
+        index=index+1;
+        
+        document.getElementById(a[index]).style.display='block';
+        }
+}
+
+</script>
+</head>
+<body>
+        <div id="as" style="height:100%;width:100%;opacity:0.9">
+                <img src="a.jpg" id="imm" style="position:absolute;top:39%;z-index: -1"/>
+<div style="display: block;width: 100%;height:30%;position: sticky;">
+        <img src="a1.jpg" style="position: absolute;width:100%;height: 100%;"/>
+</div>
+  <div id='a' style="display:block;font-weight: bolder;color: red" > 
+
+       
+   <h1 style="color:"red"  > Question 1:Choose one of the meals from the following options: </h1><br>
+<form>
+        A:<input type="radio" name="seafood" value="10"><font style="color:red">Seafood</font><br><br>
+        B:<input type="radio" name="seafood" value="30"><font style="color:red">Takeaway food</font><br><br>
+        C:<input type="radio" name="seafood" value="40"><font style="color:red">Fast food</font><br><br>
+        D:<input type="radio" name="seafood" value="20"><font style="color:red">Soup</font><br><br>
+
+</form>
+<button onclick="fun()" id='z'>Next Question</button><br><br>
+</div>
+<div id='b'> 
+   <h1 style="color:red"> Question 2:Pick a drink to go with your meal from  the following options: </h1><br>
+<form>
+        A:<input type="radio" name="softdrink" value="40"><font style="color:red">Soft drink</font><br><br>
+        B:<input type="radio" name="softdrink" value="20"><font style="color:red">Beer</font><br><br>
+        C:<input type="radio" name="softdrink" value="10"><font style="color:red">Red wine</font><br><br>
+        D:<input type="radio" name="softdrink" value="30"><font style="color:red">Fruit juice</font><br><br>
+
+</form><button onclick="fun()" id='z'>Next Question</button><br><br><br><br>
+</div>
+<div id='c'>
+   <h1 style="color:red"> Question 3:You turn on the TV and have to watch one of the following,which do yo choose? </h1><br>
+<form>
+       A:<input type="radio" name="documentary" value="10"><font style="color:red">Documetary</font><br><br>
+        B:<input type="radio" name="documentary" value="40"><font style="color:red">Cartoons</font><br><br>
+        C:<input type="radio" name="documentary" value="30"><font style="color:red">An action or comedy</font><br><br>
+        D:<input type="radio" name="documentary" value="20"><font style="color:red">A drama or thriller</font><br><br>
+
+</form><button onclick="fun()" id='z'>Next Question</button><br><br>
+</div>
+<div id='d'>
+          <h1 style="color:red"> Question 4:What is your opinion on candy? </h1><br>
+<form>
+        A:<input type="radio" name="i love it" value="40"><font style="color:red">I love it</font><br><br>
+        B:<input type="radio" name="i love it" value="30"><font style="color:red">It's okay</font><br><br>
+        C:<input type="radio" name="i love it" value="20"><font style="color:red">Candy is for kids</font><br><br>
+        D:<input type="radio" name="i love it" value="10"><font style="color:red">It's unhealthy,so I avoid it</font><br><br>
+
+</form><button onclick="fun()" id='z'>Next Question</button><br><br>
+</div>
+<div id='e'>
+   <h1 style="color:red"> Question 5:What is your opinion on Twitter/Facebook? </h1><br>
+<form>
+        A:<input type="radio" name="useful" value="30"><font style="color:red">Useful</font><br><br>
+        B:<input type="radio" name="useful" value="20"><font style="color:red">Stupid;a waste of time</font><br><br>
+        C:<input type="radio" name="useful" value="40"><font style="color:red">Essential-couldn't live without it</font><br><br>
+        D:<input type="radio" name="useful" value="10"><font style="color:red">Confusing</font><br><br>
+
+</form><button onclick="fun()" id='z'>Next Question</button><br><br>
+</div>
+<div id='f'>
+   <h1 style="color:red"> Question 6:What is your opinion on smartphones? </h1><br>
+<form>
+        A:<input type="radio" name="useful,i guess" value="30"><font style="color:red">Useful,I guess</font><br><br>
+        B:<input type="radio" name="useful,i guess" value="40"><font style="color:red">Absolutely necessary</font><br><br>
+        C:<input type="radio" name="useful,i guess" value="10"><font style="color:red">Way too confusing</font><br><br>
+        D:<input type="radio" name="useful,i guess" value="20"><font style="color:red">Unnecessary and expensive</font><br><br>
+
+</form><button onclick="fun()" id='z'>Next Question</button><br><br>
+</div>
+<div id='g'>
+   <h1 style="color:red"> Question 7:How do you like to celebrate your birthday?</h1><br>
+<form>
+        A:<input type="radio" name="celebrating birthdays is for kids" value="10"><font style="color:red">Celebrating birthdays is for kids</font><br><br>
+        B:<input type="radio" name="celebrating birthdays is for kids" value="20"><font style="color:red">Having a meal with family</font><br><br>
+        C:<input type="radio" name="celebrating birthdays is for kids" value="30"><font style="color:red">Partying with friends</font><br><br>
+        D:<input type="radio" name="celebrating birthdays is for kids" value="40"><font style="color:red">Birthday games and cake!</font><br><br>
+
+</form><button onclick="fun()" id='z'>Next Question</button><br><br>
+</div>
+<div id='h'>
+   <h1 style="color:red"> Question 8:What is your opinion on classical music? </h1><br>
+<form>
+        A:<input type="radio" name="it's relaxing" value="20"><font style="color:red">It's relaxing</font><br><br>
+        B:<input type="radio" name="it's relaxing" value="40"><font style="color:red">I hate it!</font><br><br>
+        C:<input type="radio" name="it's relaxing" value="30"><font style="color:red">I love it!</font><br><br>
+        D:<input type="radio" name="it's relaxing" value="10"><font style="color:red">Its okay</font><br><br>
+
+</form><button onclick="fun()" id='z'>Next Question</button><br><br>
+</div>
+<div id='i'>
+   <h1 style="color:red"> Question 9:What would your idea holiday/vacation consist of?  </h1><br>
+<form>
+        A:<input type="radio" name="going to a theme park" value="40"><font style="color:red">Going to a theme park</font><br><br>
+        B:<input type="radio" name="going to a theme park" value="30"><font style="color:red">Beach</font><br><br>
+        C:<input type="radio" name="going to a theme park" value="20"><font style="color:red">Touring</font><br><br>
+        D:<input type="radio" name="going to a theme park" value="10"><font style="color:red">Experiencing new cultures</font><br><br>
+
+</form><button onclick="fun()" id='z'>Next Question</button><br><br>
+</div>
+<div id='j'>
+   <h1 style="color:red"> Question 10:Which ride you will prefer from the following option?</h1><br>
+<form>
+        A:<input type="radio" name="roller coaster" value="20"><font style="color:red">Roller coaster</font><br><br>
+        B:<input type="radio" name="roller coaster" value="30"><font style="color:red">Train</font><br><br>
+        C:<input type="radio" name="roller coaster" value="10"><font style="color:red">Hot air balloon</font><br><br>
+        D:<input type="radio" name="roller coaster" value="40"><font style="color:red">Electric car</font><br><br>
+
+
+        <button onclick="fun()" id='z'>Score</button>
+</form><br><br>
+</div>
+</div>
+
+</body>
+</head>
+
+</html>
